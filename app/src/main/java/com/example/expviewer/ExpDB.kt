@@ -80,6 +80,18 @@ class ExpDB(val context: Context) {
         sqLiteDatabase!!.execSQL(query)
     }
 
+    fun getSingleExp(id: Int): ExpData {
+        val query = " SELECT * FROM " + TABLE_NAME + " WHERE " + ID + "=" + id
+        val cursor = sqLiteDatabase!!.rawQuery(query, null)
+        var exp = ExpData()
+        if (cursor.count != 0) {
+            cursor.moveToFirst()
+            exp = getExp(cursor)
+        }
+        cursor.close()
+        return exp
+    }
+
     fun getArrayExp(): ArrayList<ExpData> {
         val query = " SELECT * FROM " + TABLE_NAME
         val cursor = sqLiteDatabase!!.rawQuery(query, null)

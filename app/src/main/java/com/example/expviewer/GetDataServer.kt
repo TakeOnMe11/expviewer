@@ -23,19 +23,14 @@ class GetDataServer (val context: Context) {
                     .subscribeOn(Schedulers.io())
                     ?.observeOn(AndroidSchedulers.mainThread())
                     ?.subscribe(object: Observer<Response<List<ExpData>>>{
-                        override fun onComplete() {
-                            Log.d("onComplete", "Nikita")
-                        }
+                        override fun onComplete() {}
 
                         override fun onSubscribe(d: Disposable) {}
 
                         override fun onNext(t: Response<List<ExpData>>) {
-                            Log.d("onNext", "lol")
                             if (t.code() == 200) {
                                 Log.d("onNext", "Ответ получен")
                                 val body = t.body()
-                                Log.d("1", body!!.count().toString())
-                                //val exp = body?.experiments_results
                                 expDB.addAllExp(body!!)
                             } else {
                                 closeDB()

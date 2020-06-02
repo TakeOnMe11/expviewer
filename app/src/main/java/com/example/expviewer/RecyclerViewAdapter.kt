@@ -1,6 +1,8 @@
 package com.example.expviewer
 
 import android.content.Context
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,7 +19,7 @@ class RecyclerViewAdapter(private val data: ArrayList<ExpData>, val context: Con
     private var dataFull = ArrayList<ExpData>(data)
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder.bind(data[position])
+        holder.bind(data.get(position))
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -33,14 +35,18 @@ class RecyclerViewAdapter(private val data: ArrayList<ExpData>, val context: Con
         var expData = ExpData()
 
         fun bind(expDataDTO: ExpData) = with(itemView){
-            expId = expData.id
+            expId = expDataDTO.id
             tv_expname_list.text = expDataDTO.name
             tv_expdate_list.text = expDataDTO.measDate
             tv_expcomment_list.text = expDataDTO.comment
+            itemView.setOnClickListener(this@Holder)
         }
 
-        override fun onClick(p0: View?) {
 
+        override fun onClick(p0: View?) {
+            val intent = Intent(context, SingleExpActivity::class.java)
+            intent.putExtra(context.getString(R.string.key_id), expId)
+            context.startActivity(intent)
         }
 
     }

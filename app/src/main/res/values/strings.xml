@@ -4,10 +4,16 @@
     <string name="expNameList">Название эксперимента: </string>
     <string name="measDateList">Дата эксперимента: </string>
     <string name="commentList">Комментарий: </string>
+    <string name="setName">Название установки: </string>
+    <string name="setDesc">Описание установки: </string>
+    <string name="typeDesc">Тип измерения: </string>
+
     <string name="no_name">Нет названия</string>
     <string name="no_date">Нет даты</string>
     <string name="no_comment">Нет комментария</string>
     <string name="no_type">Нет типа измерения</string>
     <string name="no_set_name">Нет названия установки</string>
     <string name="no_set_desc">Нет описания установки</string>
+    
+    <string name="key_id">id</string>
 </resources>

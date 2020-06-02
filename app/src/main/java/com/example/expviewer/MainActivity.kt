@@ -20,7 +20,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var v: View
     private lateinit var viewAdapter: RecyclerViewAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
     private lateinit var expDB: ExpDB
@@ -54,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             ?.observeOn(AndroidSchedulers.mainThread())
             ?.subscribe(object: Observer<Boolean>{
                 override fun onComplete() {
-                    Log.d("main", "kek")
+
                 }
 
                 override fun onSubscribe(d: Disposable) {}
