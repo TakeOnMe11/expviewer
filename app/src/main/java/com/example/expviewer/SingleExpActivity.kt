@@ -27,8 +27,8 @@ class SingleExpActivity : AppCompatActivity () {
 
         expDB = ExpDB(this)
         val exp = expDB.getSingleExp(id)
+        Log.d("exp", exp.toString())
         Log.d("exp", exp.setDescription)
-        Log.d("exp", exp.setName)
         Log.d("exp", exp.typeName)
         val data = exp.data
         val words:Array<String>  = data.split("\\s+".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()

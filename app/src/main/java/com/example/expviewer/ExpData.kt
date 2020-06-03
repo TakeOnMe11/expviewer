@@ -11,6 +11,6 @@ data class ExpData (
     @SerializedName("comment") var comment: String = "",
     @SerializedName("data") var data: String = "",
     @SerializedName("setid__name") var setName: String = "",
-    @SerializedName("setid_description") var setDescription: String = "",
-    @SerializedName("typeid_description") var typeName: String = ""
+    @SerializedName("setid__description") var setDescription: String = "",
+    @SerializedName("typeid__description") var typeName: String = ""
 )

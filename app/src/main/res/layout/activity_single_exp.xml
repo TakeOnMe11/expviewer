@@ -26,12 +26,12 @@
                     android:layout_marginStart="8dp"
             />
             <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content" android:id="@+id/tv_exp_name_var"
                     app:layout_constraintTop_toBottomOf="@+id/graph_view"
                     app:layout_constraintStart_toEndOf="@+id/tv_exp_name" android:layout_marginStart="4dp"
                     android:layout_marginTop="8dp" android:text="@string/no_name"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
                     app:layout_constraintHorizontal_bias="0.0"/>
             <TextView
                     android:text="@string/measDateList"
@@ -41,12 +41,12 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_exp_name_var"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
             <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content" android:id="@+id/tv_exp_measdate_var"
                     app:layout_constraintStart_toEndOf="@+id/tv_exp_measdate"
                     android:layout_marginStart="36dp" android:layout_marginTop="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/tv_exp_name_var" android:text="@string/no_date"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
                     app:layout_constraintHorizontal_bias="0.0"/>
             <TextView
                     android:text="@string/commentList"
@@ -56,13 +56,13 @@
                     android:layout_marginStart="8dp" android:layout_marginTop="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/tv_exp_measdate_var"/>
             <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content" android:id="@+id/tv_exp_comment_var"
                     app:layout_constraintStart_toEndOf="@+id/tv_exp_comment"
                     android:layout_marginTop="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/tv_exp_measdate_var" android:layout_marginStart="75dp"
                     android:text="@string/no_comment" app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginEnd="24dp" app:layout_constraintHorizontal_bias="0.0"/>
+                    android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.0"/>
             <TextView
                     android:text="@string/setName"
                     android:layout_width="wrap_content"
@@ -72,12 +72,12 @@
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
                     android:id="@+id/tv_exp_setname"/>
             <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content" android:id="@+id/tv_exp_setname_var"
                     app:layout_constraintStart_toEndOf="@+id/tv_exp_setname"
                     android:layout_marginStart="31dp" android:layout_marginTop="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/tv_exp_comment_var" android:text="@string/no_set_name"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
                     app:layout_constraintHorizontal_bias="0.0"/>
             <TextView
                     android:text="@string/setDesc"
@@ -87,12 +87,12 @@
                     android:layout_marginStart="8dp" android:layout_marginTop="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/tv_exp_setname_var"/>
             <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content" android:id="@+id/tv_exp_setdesc_var"
                     app:layout_constraintStart_toEndOf="@+id/tv_exp_setdesc"
                     android:layout_marginStart="30dp" android:layout_marginTop="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/tv_exp_setname_var" android:text="@string/no_set_desc"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
                     app:layout_constraintHorizontal_bias="0.0"/>
             <TextView
                     android:text="@string/typeDesc"
@@ -102,13 +102,13 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_exp_setdesc_var"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
             <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content" android:id="@+id/tv_exp_typedesc_var"
                     app:layout_constraintStart_toEndOf="@+id/tv_exp_typedesc"
                     android:layout_marginStart="66dp" android:layout_marginTop="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/tv_exp_setdesc_var" android:text="@string/no_type"
                     android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintVertical_bias="0.0" app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginEnd="24dp" app:layout_constraintHorizontal_bias="0.0"/>
+                    android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.0"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
