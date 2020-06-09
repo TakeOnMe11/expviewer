@@ -66,12 +66,12 @@ class ExpDB(val context: Context) {
         if (exp.setName.isEmpty()) {
             exp.setName = context.getString(R.string.no_set_name)
         }
-//        if (exp.setDescription.isEmpty()) {
-//            exp.setDescription = context.getString(R.string.no_set_desc)
-//        }
-//        if (exp.typeName.isEmpty()) {
-//            exp.typeName = context.getString(R.string.no_type)
-//        }
+        if (exp.setDescription.isEmpty()) {
+            exp.setDescription = context.getString(R.string.no_set_desc)
+        }
+        if (exp.typeName.isEmpty()) {
+            exp.typeName = context.getString(R.string.no_type)
+        }
 
         val query = " INSERT OR REPLACE INTO " + TABLE_NAME + " VALUES(" + exp.id + ",\"" +
                 exp.name + "\",\"" + exp.measDate + "\",\"" + exp.comment + "\",\"" +

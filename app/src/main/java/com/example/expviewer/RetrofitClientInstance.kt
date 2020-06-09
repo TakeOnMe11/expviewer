@@ -10,6 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class RetrofitClientInstance {
     private val BASE_URL = "http://192.168.0.176:8000/"
     private var getRequest: GetRequest? = null
+    private var postRequest: PostRequest? = null
 
     init {
         val rertofit = Retrofit.Builder().baseUrl(BASE_URL)
@@ -17,9 +18,12 @@ class RetrofitClientInstance {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         getRequest = rertofit.create(GetRequest::class.java)
+        postRequest = rertofit.create(PostRequest::class.java)
     }
 
     fun getAllExp(): Observable<Response<List<ExpData>>> = getRequest!!.getAllExp()
+
+    fun postAllExp(exp: ExpData): Observable<Response<ExpData>> = postRequest!!.postAllExp(exp)
 
     companion object {
         private var instance: RetrofitClientInstance? = null

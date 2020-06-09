@@ -30,8 +30,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         expDB = ExpDB(this)
 
-        getData()
-
         listExp = expDB.getArrayExp()
         viewAdapter = RecyclerViewAdapter(listExp, this)
         viewManager = LinearLayoutManager(this)
@@ -43,6 +41,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onStart() {
+        getData()
+        viewAdapter.notifyDataSetChanged()
         super.onStart()
     }
 

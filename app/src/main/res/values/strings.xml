@@ -15,5 +15,10 @@
     <string name="no_set_name">Нет названия установки</string>
     <string name="no_set_desc">Нет описания установки</string>
     
+    <string name="save_change">Сохранить изменения</string>
+
+    <string name="post_ok">Данные успешно сохранены</string>
+    <string name="post_error">Не удалось сохранить данные</string>
+    
     <string name="key_id">id</string>
 </resources>
