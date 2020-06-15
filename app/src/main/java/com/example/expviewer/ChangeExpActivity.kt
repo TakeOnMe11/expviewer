@@ -52,7 +52,10 @@ class ChangeExpActivity : AppCompatActivity () {
             result.add(Entry(xAxis[i], yAxis[i]))
         }
 
-        val lineDataSet = LineDataSet(result, "result")
+        val desc = graph_view_ed.description
+        desc.text = ""
+        graph_view_ed.setDrawBorders(true)
+        val lineDataSet = LineDataSet(result, "Результат эксперимента (Y - imp, X - nm)")
         lineDataSet.setDrawCircles(false)
         lineDataSet.color = Color.RED
         graph_view_ed.data = LineData(lineDataSet)

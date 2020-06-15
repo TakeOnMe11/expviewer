@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import com.github.mikephil.charting.components.Description
 import com.github.mikephil.charting.data.Entry
 import kotlinx.android.synthetic.main.activity_single_exp.*
 import kotlin.collections.ArrayList
@@ -54,7 +55,10 @@ class SingleExpActivity : AppCompatActivity () {
             result.add(Entry(xAxis[i], yAxis[i]))
         }
 
-        val lineDataSet = LineDataSet(result, "result")
+        val desc = graph_view.description
+        desc.text = ""
+        graph_view.setDrawBorders(true)
+        val lineDataSet = LineDataSet(result, "Результат эксперимента (Y - imp, X - nm)")
         lineDataSet.setDrawCircles(false)
         lineDataSet.color = Color.RED
         graph_view.data = LineData(lineDataSet)
